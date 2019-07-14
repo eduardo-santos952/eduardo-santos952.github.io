@@ -29,19 +29,36 @@
     <div class="sky"></div>
     <div class="d-flex toggled" id="wrapper">
       <div class="bg-dark border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">Endpoint's </div>
+        <div class="sidebar-heading">Endpoint's - Root: <a href="https://star-planets-api.herokuapp.com/" target="_blank">https://star-planets-api.herokuapp.com/</a></div>
         <div class="list-group list-group-flush">
           <a href="#" class="list-group-item list-group-item-action bg-dark">
-            <h4>Example heading <span class="badge badge-success">GET</span></h4>
+            <h4>https://star-planets-api.herokuapp.com/ <span class="badge badge-success">GET</span></h4>
+            <span>Boas vindas e versão</span>
           </a>
           <a href="#" class="list-group-item list-group-item-action bg-dark">
-            <h4>Example heading <span class="badge badge-success">GET</span></h4>
+            <h4>/planets <span class="badge badge-success">GET</span></h4>
+            <span>Lista todos os PLANETAS</span>
           </a>
           <a href="#" class="list-group-item list-group-item-action bg-dark">
-            <h4>Example heading <span class="badge badge-warning">POST</span></h4>
+            <h4>/planets/{slug-do-planeta} <span class="badge badge-success">GET</span></h4>
+            <span>Lista planeta com a SLUG</span>
           </a>
           <a href="#" class="list-group-item list-group-item-action bg-dark">
-            <h4>Example heading <span class="badge badge-danger">DELETE</span></h4>
+            <h4>/planets/id/{id-do-planeta} <span class="badge badge-success">GET</span></h4>
+            <span>Lista planeta pelo ID (ID é um campo único no Schema)</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>/planets/name/{nome-do-planeta} <span class="badge badge-success">GET</span></h4>
+            <span>Lista planeta pelo NOME</span>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>/planets <span class="badge badge-warning">POST</span></h4>
+            <span>Insere um novo PLANETA</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>/planets/{id-do-planeta} <span class="badge badge-danger">DELETE</span></h4>
+            <span>Remove o planeta pelo ID</span>
           </a>
         </div>
       </div>

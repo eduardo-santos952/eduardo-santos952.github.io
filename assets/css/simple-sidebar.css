@@ -11,7 +11,7 @@ body {
   left: 90%;
 }
 #sidebar-wrapper {
-  margin-left: -18rem;
+  margin-left: -100%;
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
   -o-transition: margin .25s ease-out;
@@ -20,6 +20,20 @@ body {
   position: absolute;
   border: 0 !important;
   border-radius: 7px;
+  z-index: 9999;
+}
+
+.list-group{
+  width: auto !important;
+  color: #fff;
+}
+
+.list-group a{
+  color: #fff;
+}
+
+#wrapper.badge{
+  float: right;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -50,7 +64,7 @@ body {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -18rem;
+    margin-left: -100%;
   }
 
   #menu-toggle{
