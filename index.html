@@ -1,20 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-punk.min.css">
+  <link rel="stylesheet" href="assets/css/simple-sidebar.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <title>Star Planet's API | Ame Digital</title>
+</head>
 
-    <title>Star Planet's API | Ame Digital</title>
-  </head>
-  <body>
-    <h1>first commit!</h1>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+<body>
+  <small id="api-version"></small>
+  <div class="container">
+    <lable class=lable for="slider1">STARS
+      <input class="slider" name="slider1" type=range min="10" max="1000" value="20"></input>
+      <div class="value"></div>
+    </lable>
+    <lable class=lable for="slider2">SIZE
+      <input class="slider" name="slider2" type=range min="1" max="50" value="5"></input>
+      <div class="value"></div>
+    </lable>
+    <div class="sky"></div>
+    <div class="d-flex toggled" id="wrapper">
+      <div class="bg-dark border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Endpoint's </div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>Example heading <span class="badge badge-success">GET</span></h4>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>Example heading <span class="badge badge-success">GET</span></h4>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>Example heading <span class="badge badge-warning">POST</span></h4>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action bg-dark">
+            <h4>Example heading <span class="badge badge-danger">DELETE</span></h4>
+          </a>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="menu-toggle">Endpoint's</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-container">
+        <br>
+        <h2 class="text-center">Inserir planeta!</h2>
+        <br>
+        <form class="form-planet">
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label align-middle">Nome</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="name" placeholder="Ex.: Solaris 7">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="slug" class="col-sm-2 col-form-label align-middle">slug</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="slug_name" placeholder="Ex.: solaris-7">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="climate" class="col-sm-2 col-form-label align-middle">Clima</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="climate" placeholder="Ex.: Árido, Seco">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="terrain" class="col-sm-2 col-form-label align-middle">Terreno</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="terrain" placeholder="Ex.: Planicie">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="films" class="col-sm-2 col-form-label align-middle">Filmes</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="films"
+                placeholder="Ex.: Star Wars: Episódio VII - O Despertar da Força">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-2 button-element">
+              <button type="submit" class="btn btn-primary">Inserir</button>
+            </div>
+          </div>
+        </form>
+        <div id="loader" class="col-md-8 align-center">
+          Gerando planeta...
+        </div>
+      </div>
+      <div class="col-md-4 card-response">
+        <div class="card">
+          <div class="card-header">
+            <span class="badge badge-success">SUCESSO</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Planeta inserido com sucesso!</h5>
+            <p class="card-text">Para visualizá-lo no banco de dados, clique no botão abaixo!</p>
+            <a href="" id="link-planet" class="btn btn-primary" target="_blank">Visualizar</a>
+            <a href="" class="btn btn-info" onClick="window.location.reload();">
+              <span class="glyphicon glyphicon-repeat"></span> Inserir outro planeta!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+      <div id="hero"></div>
+      <div class="col-md-1 footer-content">
+        <a href="#">
+          <img src="assets/imgs/github.gif">
+        </a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/tooltipster.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="assets/js/typeit.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </footer>
+</body>
 </html>
