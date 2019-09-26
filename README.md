@@ -1,3 +1,3 @@
-# eduardo-santos952.github.io
+# ricoeduardo.github.io
 
-https://eduardo-santos952.github.io/
+https://ricoeduardo.github.io/
